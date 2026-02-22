@@ -5,7 +5,7 @@ class WeatherAPI(BaseAPIClient):
     def __init__(self):
         super().__init__(config.WEATHER_BASE_URL)
 
-    def get_weather_data(self, city: str):
+    def get_weather_data(self, city: str) -> dict:
         params = {
             "q": city,
             "appid": config.WEATHER_API_KEY,

@@ -40,7 +40,7 @@ class WeatherApp(tk.Tk):
         self.display = WeatherDisplay(self, self.weather_service)
         self.display.pack(pady=20, fill="both", expand=True)
 
-    def fetch_weather(self, city_name):
+    def fetch_weather(self, city_name: str) -> dict:
         """
         Event handler triggered when a city is selected.
         Fetches data from API and updates the display component.

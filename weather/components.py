@@ -41,7 +41,7 @@ class WeatherDisplay(ttk.Frame):
             daemon=True
         ).start()
 
-    def load_icon(self, icon_code):
+    def load_icon(self, icon_code: str) -> dict:
         """Fetch icon bytes from service and convert to PhotoImage."""
         try:
             # Get raw image content via service
