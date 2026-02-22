@@ -1,4 +1,5 @@
 import logging
+import os
 
 
 def setup_logger():
@@ -11,11 +12,19 @@ def setup_logger():
         "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
     )
 
+    # Console Handler
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
-    log_file = "logs/"
+    # Logs path
+    log_dir = "logs/"
+    log_file = os.path.join(log_dir, "app.log")
+
+    # Creating directory if not exist 
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+
     file_handler = logging.FileHandler(log_file, mode='a', encoding='utf-8')
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.DEBUG)

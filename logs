@@ -1,8 +1,0 @@
-2026-02-22 12:30:23,219 [INFO] WeatherApp: LocationService initialized with Thread-Locking.
-2026-02-22 12:30:23,235 [DEBUG] WeatherApp: Countries not found in cache, requesting from DB
-2026-02-22 12:30:23,237 [INFO] WeatherApp: Syncing country list from API.
-2026-02-22 12:30:24,086 [DEBUG] WeatherApp: Country list is already up-to-date
-2026-02-22 12:30:33,998 [INFO] WeatherApp: Fetching regions for country: UA
-2026-02-22 12:30:35,293 [INFO] WeatherApp: Fetching cities for: UA, 71
-2026-02-22 12:30:39,319 [ERROR] WeatherApp: UI update error: City 'Smila' not found on the service.
-2026-02-22 12:30:42,925 [ERROR] WeatherApp: UI update error: City 'Talne' not found on the service.
