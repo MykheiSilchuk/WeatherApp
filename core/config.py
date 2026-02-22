@@ -16,7 +16,10 @@ class Config:
         
         # Asset settings
         self.ICON_BASE_URL: str | None = os.getenv("ICON_BASE_URL")
-        self.TIMEOUT: int | None = int(os.getenv("TIMEOUT", 10)) 
+        self.TIMEOUT: int | None = int(os.getenv("TIMEOUT", 10))    
+
+        self.UNITS: str | None = os.getenv("URL_SETTINGS_UNITS")
+        self.LANG: str | None = os.getenv("URL_SETTINGS_LANG")
 
         self.validation()
 
