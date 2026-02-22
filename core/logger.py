@@ -13,8 +13,13 @@ def setup_logger():
 
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
-
     logger.addHandler(console_handler)
+
+    log_file = "logs/"
+    file_handler = logging.FileHandler(log_file, mode='a', encoding='utf-8')
+    file_handler.setFormatter(formatter)
+    file_handler.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
 
     return logger
 

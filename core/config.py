@@ -5,16 +5,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    # Weather API settings
-    WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-    WEATHER_BASE_URL = "https://api.openweathermap.org/data/2.5/"
-    
-    # CountryRegionCity API settings for location selection
-    LOCATION_API_KEY = os.getenv("LOCATION_API_KEY")
-    LOCATION_BASE_URL = "https://api.countrystatecity.in/v1/"
-    
-    # Asset settings
-    ICON_BASE_URL = "https://openweathermap.org/img/wn/"
-    TIMEOUT = 10
+    def __init__(self):
+        # Weather API settings
+        self.WEATHER_API_KEY: str | None = os.getenv("WEATHER_API_KEY")
+        self.WEATHER_BASE_URL: str | None = os.getenv("WEATHER_BASE_URL")
+        
+        # CountryRegionCity API settings for location selection
+        self.LOCATION_API_KEY: str | None = os.getenv("LOCATION_API_KEY")
+        self.LOCATION_BASE_URL: str | None = os.getenv("LOCATION_BASE_URL")
+        
+        # Asset settings
+        self.ICON_BASE_URL: str | None = os.getenv("ICON_BASE_URL")
+        self.TIMEOUT: int | None = int(os.getenv("TIMEOUT", 10)) 
+
+        self.validation()
+
+    def validation(self) -> None:
+        if not self.WEATHER_API_KEY:
+            raise RuntimeError(
+                "WEATHER_API_KEY is not set in .env"
+            )
+
 
 config = Config()

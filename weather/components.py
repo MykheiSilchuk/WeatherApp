@@ -25,7 +25,7 @@ class WeatherDisplay(ttk.Frame):
         self.details_label = ttk.Label(self, font=("Segoe UI", 10), justify="center")
         self.details_label.pack(pady=10)
 
-    def update_weather(self, data: dict):
+    def update_weather(self, data: dict) -> dict:
         """Update text labels and trigger background icon loading."""
         self.temp_label.config(text=f"{data['temperature']}°C")
         self.desc_label.config(text=data['description'].capitalize())
