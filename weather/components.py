@@ -5,10 +5,10 @@ from tkinter import ttk
 from core.logger import app_logger
 
 class WeatherDisplay(ttk.Frame):
-    def __init__(self, parent, weather_service):
+    def __init__(self, parent, icon_service):
         super().__init__(parent)
         # Store reference to the service layer
-        self.weather_service = weather_service
+        self.icon_service = icon_service
         self.setup_ui()
 
     def setup_ui(self):
@@ -45,7 +45,7 @@ class WeatherDisplay(ttk.Frame):
         """Fetch icon bytes from service and convert to PhotoImage."""
         try:
             # Get raw image content via service
-            content = self.weather_service.icon_service.get_icon(icon_code)
+            content = self.icon_service.get_icon(icon_code)
             
             # Process image using Pillow
             image = Image.open(BytesIO(content))

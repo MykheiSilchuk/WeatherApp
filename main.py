@@ -37,7 +37,7 @@ class WeatherApp(tk.Tk):
         ttk.Separator(self).pack(fill="x", padx=40)
 
         # Main weather display component - now receives the service instance
-        self.display = WeatherDisplay(self, self.weather_service)
+        self.display = WeatherDisplay(self, self.weather_service.icon_service)
         self.display.pack(pady=20, fill="both", expand=True)
 
     def fetch_weather(self, city_name: str) -> dict:
@@ -70,3 +70,6 @@ def main():
 if __name__ == "__main__":
     # Application entry point
     main()
+
+
+
