@@ -6,7 +6,7 @@ A desktop weather application built with Python and Tkinter that provides real-t
 
 | Ukraine – Smila | United Kingdom – Seafield | Japan – Kimitsu |
 |---|---|---|
-| ![Smila](screenshots/smila.png) | ![Seafield](screenshots/seafield.png) | ![Kimitsu](screenshots/kimitsu.png) |
+| ![Smila](screenshots/Smila.png) | ![Seafield](screenshots/Seafield.png) | ![Kimitsu](screenshots/Kimitsu.png) |
 
 ## Features
 
