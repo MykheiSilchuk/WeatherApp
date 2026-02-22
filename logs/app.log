@@ -1,0 +1,255 @@
+2026-02-21 21:21:45,948 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 21:21:45,950 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 21:21:45,970 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 21:22:11,619 [INFO] WeatherApp: Fetching states for country: UA
+2026-02-21 21:22:13,872 [INFO] WeatherApp: Fetching cities for: UA, 21
+2026-02-21 21:22:15,029 [INFO] WeatherApp: Cities for 21 (UA) updated successfully.
+2026-02-21 21:22:18,655 [INFO] WeatherApp: Weather request fot Khust Raion
+2026-02-21 21:22:19,036 [ERROR] WeatherApp: WeatherService unexpected error for Khust Raion: Network error occurred.
+Please check your connection and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 20, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Desktop\weather_app\venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Khust+Raion&appid=94fe106dcd231edad34267e3904ce792&units=metric&lang=ua
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise NetworkError(f"Network error: {e}")
+core.errors.NetworkError: Network error occurred.
+Please check your connection and try again.
+2026-02-21 21:27:30,248 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 21:27:30,251 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 21:27:30,267 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 21:27:37,298 [INFO] WeatherApp: Fetching states for country: UA
+2026-02-21 21:27:39,160 [INFO] WeatherApp: Fetching cities for: UA, 21
+2026-02-21 21:27:40,127 [INFO] WeatherApp: Cities for 21 (UA) updated successfully.
+2026-02-21 21:27:42,603 [INFO] WeatherApp: Weather request fot Rakhiv Raion
+2026-02-21 21:27:42,744 [ERROR] WeatherApp: WeatherService unexpected error for Rakhiv Raion: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:27:48,171 [INFO] WeatherApp: Weather request fot Rakoshyno
+2026-02-21 21:27:48,252 [INFO] WeatherApp: Data loaded for Rakoshyno
+2026-02-21 21:27:52,846 [INFO] WeatherApp: Weather request fot Berehove
+2026-02-21 21:27:52,929 [INFO] WeatherApp: Data loaded for Berehove
+2026-02-21 21:27:56,116 [INFO] WeatherApp: Fetching cities for: UA, 43
+2026-02-21 21:27:57,236 [INFO] WeatherApp: Cities for 43 (UA) updated successfully.
+2026-02-21 21:27:57,501 [INFO] WeatherApp: Cities for 43 (UA) updated successfully.
+2026-02-21 21:27:59,477 [INFO] WeatherApp: Weather request fot Bilohirsk
+2026-02-21 21:27:59,541 [INFO] WeatherApp: Data loaded for Bilohirsk
+2026-02-21 21:28:02,865 [INFO] WeatherApp: Weather request fot Dzhankoyskiy rayon
+2026-02-21 21:28:02,967 [ERROR] WeatherApp: WeatherService unexpected error for Dzhankoyskiy rayon: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:06,093 [INFO] WeatherApp: Weather request fot Gurzuf
+2026-02-21 21:28:06,175 [INFO] WeatherApp: Data loaded for Gurzuf
+2026-02-21 21:28:11,644 [INFO] WeatherApp: Fetching cities for: UA, 30
+2026-02-21 21:28:12,828 [INFO] WeatherApp: Cities for 30 (UA) updated successfully.
+2026-02-21 21:28:13,476 [INFO] WeatherApp: Weather request fot Holosiiv
+2026-02-21 21:28:13,664 [INFO] WeatherApp: Data loaded for Holosiiv
+2026-02-21 21:28:17,274 [INFO] WeatherApp: Weather request fot Shevchenkivs’kyy Rayon
+2026-02-21 21:28:17,375 [ERROR] WeatherApp: WeatherService unexpected error for Shevchenkivs’kyy Rayon: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:20,060 [INFO] WeatherApp: Weather request fot Solomianka Rayon
+2026-02-21 21:28:20,138 [ERROR] WeatherApp: WeatherService unexpected error for Solomianka Rayon: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:22,794 [INFO] WeatherApp: Weather request fot Svyatoshyns’kyy Rayon
+2026-02-21 21:28:22,896 [ERROR] WeatherApp: WeatherService unexpected error for Svyatoshyns’kyy Rayon: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:33,245 [INFO] WeatherApp: Weather request fot Dnipro Raion
+2026-02-21 21:28:33,601 [ERROR] WeatherApp: WeatherService unexpected error for Dnipro Raion: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:36,338 [INFO] WeatherApp: Weather request fot Desnyans’kyy Rayon
+2026-02-21 21:28:36,447 [ERROR] WeatherApp: WeatherService unexpected error for Desnyans’kyy Rayon: City not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 24, in _make_request
+    raise CityNotFoundError(f"Location not found via API: {url}")
+core.errors.CityNotFoundError: City not found.
+Please check the city name and try again.
+2026-02-21 21:28:40,011 [INFO] WeatherApp: Fetching cities for: UA, 30
+2026-02-21 21:28:42,056 [INFO] WeatherApp: Fetching cities for: UA, 32
+2026-02-21 21:28:42,995 [INFO] WeatherApp: Cities for 32 (UA) updated successfully.
+2026-02-21 21:28:44,365 [INFO] WeatherApp: Cities for 32 (UA) updated successfully.
+2026-02-21 21:28:46,723 [INFO] WeatherApp: Weather request fot Ivankiv
+2026-02-21 21:28:46,791 [INFO] WeatherApp: Data loaded for Ivankiv
+2026-02-21 22:02:50,176 [INFO] WeatherApp: --- Application starting ---
+2026-02-21 22:02:51,010 [INFO] WeatherApp: UI Theme set to dark mode.
+2026-02-21 22:02:51,010 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 22:02:51,055 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 22:02:51,079 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 22:02:51,079 [WARNING] WeatherApp: No country data in DB, performing initial API fetch
+2026-02-21 22:02:51,080 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 22:02:52,367 [INFO] WeatherApp: Country list successfully updated in local storage
+2026-02-21 22:02:53,766 [INFO] WeatherApp: Country list successfully updated in local storage
+2026-02-21 22:02:53,773 [INFO] WeatherApp: WeatherApp UI initialized successfully.
+2026-02-21 22:03:49,130 [INFO] WeatherApp: --- Application closed ---
+2026-02-21 22:07:40,534 [INFO] WeatherApp: --- Application starting ---
+2026-02-21 22:07:40,770 [INFO] WeatherApp: UI Theme set to dark mode.
+2026-02-21 22:07:40,770 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 22:07:40,772 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 22:07:40,794 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 22:07:40,803 [INFO] WeatherApp: WeatherApp UI initialized successfully.
+2026-02-21 22:07:43,097 [INFO] WeatherApp: Fetching states for country: AL
+2026-02-21 22:07:44,217 [INFO] WeatherApp: States for AL synchronized successfully.
+2026-02-21 22:07:44,681 [INFO] WeatherApp: States for AL synchronized successfully.
+2026-02-21 22:07:48,351 [INFO] WeatherApp: Fetching cities for: AL, 02
+2026-02-21 22:07:49,294 [INFO] WeatherApp: Cities for 02 (AL) updated successfully.
+2026-02-21 22:07:49,423 [INFO] WeatherApp: Cities for 02 (AL) updated successfully.
+2026-02-21 22:07:51,016 [INFO] WeatherApp: User selected location: Durrës
+2026-02-21 22:07:51,017 [INFO] WeatherApp: Weather request fot Durrës
+2026-02-21 22:07:51,385 [INFO] WeatherApp: Data loaded for Durrës
+2026-02-21 22:07:51,388 [INFO] WeatherApp: Weather display updated for: Durrës
+2026-02-21 22:08:02,600 [INFO] WeatherApp: Fetching cities for: AL, 10
+2026-02-21 22:08:03,525 [INFO] WeatherApp: Cities for 10 (AL) updated successfully.
+2026-02-21 22:08:03,762 [INFO] WeatherApp: Cities for 10 (AL) updated successfully.
+2026-02-21 22:08:05,357 [INFO] WeatherApp: User selected location: Malësi e Madhe
+2026-02-21 22:08:05,358 [INFO] WeatherApp: Weather request fot Malësi e Madhe
+2026-02-21 22:08:05,446 [ERROR] WeatherApp: WeatherService unexpected error for Malësi e Madhe: City 'Malësi e Madhe' not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 30, in _make_request
+    raise CityNotFoundError(city_name)
+core.errors.CityNotFoundError: City 'Malësi e Madhe' not found.
+Please check the city name and try again.
+2026-02-21 22:08:05,449 [WARNING] WeatherApp: City not found: Malësi e Madhe
+2026-02-21 22:08:10,109 [INFO] WeatherApp: User selected location: Rrethi i Shkodrës
+2026-02-21 22:08:10,110 [INFO] WeatherApp: Weather request fot Rrethi i Shkodrës
+2026-02-21 22:08:10,466 [ERROR] WeatherApp: WeatherService unexpected error for Rrethi i Shkodrës: City 'Rrethi i Shkodrës' not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 30, in _make_request
+    raise CityNotFoundError(city_name)
+core.errors.CityNotFoundError: City 'Rrethi i Shkodrës' not found.
+Please check the city name and try again.
+2026-02-21 22:08:10,468 [WARNING] WeatherApp: City not found: Rrethi i Shkodrës
+2026-02-21 22:08:12,873 [INFO] WeatherApp: User selected location: Bashkia Pukë
+2026-02-21 22:08:12,873 [INFO] WeatherApp: Weather request fot Bashkia Pukë
+2026-02-21 22:08:12,956 [ERROR] WeatherApp: WeatherService unexpected error for Bashkia Pukë: City 'Bashkia Pukë' not found.
+Please check the city name and try again.
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\weather\service.py", line 11, in get_weather
+    data = self.api.get_weather_data(city)
+  File "c:\Users\user\Desktop\weather_app\weather\api.py", line 15, in get_weather_data
+    return self._make_request('GET', "", params=params)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\user\Desktop\weather_app\core\network_base.py", line 30, in _make_request
+    raise CityNotFoundError(city_name)
+core.errors.CityNotFoundError: City 'Bashkia Pukë' not found.
+Please check the city name and try again.
+2026-02-21 22:08:12,958 [WARNING] WeatherApp: City not found: Bashkia Pukë
+2026-02-21 22:08:15,280 [INFO] WeatherApp: User selected location: Pukë
+2026-02-21 22:08:15,280 [INFO] WeatherApp: Weather request fot Pukë
+2026-02-21 22:08:15,345 [INFO] WeatherApp: Data loaded for Pukë
+2026-02-21 22:08:15,347 [INFO] WeatherApp: Weather display updated for: Pukë
+2026-02-21 22:08:19,704 [INFO] WeatherApp: --- Application closed ---
+2026-02-21 22:16:33,735 [INFO] WeatherApp: --- Application starting ---
+2026-02-21 22:16:34,067 [INFO] WeatherApp: UI Theme set to dark mode.
+2026-02-21 22:16:34,068 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 22:16:34,070 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 22:16:34,105 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 22:16:34,115 [INFO] WeatherApp: --- Application closed ---
+2026-02-21 22:18:41,682 [INFO] WeatherApp: --- Application starting ---
+2026-02-21 22:18:41,992 [INFO] WeatherApp: UI Theme set to dark mode.
+2026-02-21 22:18:41,992 [INFO] WeatherApp: WeatherService initialized
+2026-02-21 22:18:41,995 [INFO] WeatherApp: LocationService initialized.
+2026-02-21 22:18:42,021 [INFO] WeatherApp: Syncing country list from API.
+2026-02-21 22:18:42,097 [INFO] WeatherApp: WeatherApp UI initialized successfully.
+2026-02-21 22:18:49,169 [INFO] WeatherApp: Fetching states for country: UA
+2026-02-21 22:18:50,293 [INFO] WeatherApp: States for UA synchronized successfully.
+2026-02-21 22:18:50,497 [INFO] WeatherApp: States for UA synchronized successfully.
+2026-02-21 22:18:54,077 [INFO] WeatherApp: Fetching cities for: UA, 71
+2026-02-21 22:18:55,258 [INFO] WeatherApp: Cities for 71 (UA) updated successfully.
+2026-02-21 22:18:55,828 [INFO] WeatherApp: Cities for 71 (UA) updated successfully.
+2026-02-21 22:19:07,671 [INFO] WeatherApp: User selected location: Smila
+2026-02-21 22:19:07,672 [INFO] WeatherApp: Weather request fot Smila
+2026-02-21 22:19:07,771 [INFO] WeatherApp: Data loaded for Smila
+2026-02-21 22:19:07,772 [ERROR] WeatherApp: An unexpected error occurred in main loop
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\weather_app\main.py", line 51, in fetch_and_update
+    self.weather_display.update_display(weather_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WeatherDisplay' object has no attribute 'update_display'
+2026-02-21 22:19:23,796 [INFO] WeatherApp: --- Application closed ---
