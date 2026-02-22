@@ -7,15 +7,18 @@ from weather.service import WeatherService
 from weather.components import WeatherDisplay
 from location.components import LocationSelector
 from core.logger import app_logger
+from weather.api import WeatherAPI
+from weather.icon_service import WeatherIconService
+
 
 class WeatherApp(tk.Tk):
-    def __init__(self):
+    def __init__(self, weather_service: WeatherService):
         super().__init__()
+        self.weather_service = weather_service
+        
         self.title("SkyCast Weather")
         self.geometry("450x550")
         
-        # Initialize the shared weather service
-        self.weather_service = WeatherService()
         self.build_ui()
         
         # Apply modern dark theme if available
@@ -51,7 +54,19 @@ class WeatherApp(tk.Tk):
             app_logger.error(f"UI update error: {e}")
             messagebox.showerror("Weather Error", str(e))
 
+
+def main():
+    weather_api = WeatherAPI()
+    icon_service = WeatherIconService()
+    weather_service = WeatherService(
+        weather_api,
+        icon_service
+    )
+
+    app = WeatherApp(weather_service)
+    
+    app.mainloop()
+
 if __name__ == "__main__":
     # Application entry point
-    app = WeatherApp()
-    app.mainloop()
+    main()

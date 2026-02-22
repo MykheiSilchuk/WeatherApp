@@ -8,7 +8,7 @@ class FakeWeatherAPI:
         self.temp = temp
         self.desc = desc
 
-    def get_weather_data(self, city: str):  # правильна назва методу
+    def get_weather_data(self, city: str): 
         return {
             "name": city,
             "main": {

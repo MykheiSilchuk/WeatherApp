@@ -4,17 +4,21 @@ from weather.api import WeatherAPI
 from weather.icon_service import WeatherIconService
 
 class WeatherService:
-    def __init__(self, api=None):
+    def __init__(
+        self, 
+        api: WeatherAPI,
+        icon_service: WeatherIconService
+    ):
         # Initialize weather API and icon service
-        self.api = api or WeatherAPI()
-        self.icon_service = WeatherIconService()
-
-    def get_weather(self, city: str):
+        self.api = api
+        self.icon_service = icon_service
+    
+    def get_weather(self, city: str) -> dict:
         """Fetch weather data for a specific city and return parsed result."""
         raw_data = self.api.get_weather_data(city)
         return self.parse_weather_data(raw_data)
 
-    def parse_weather_data(self, data: dict):
+    def parse_weather_data(self, data: dict) -> dict:
         """Extract and format necessary fields from the API response."""
         try:
             return {
